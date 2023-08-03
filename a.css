@@ -320,3 +320,28 @@ ul li a:hover {
 
 /* Estilo para as barras de rolagem em navegadores Firefox */
 /* Este código só terá efeito no Firefox */
+.perguta{
+  color: #000;
+}
+
+.faq {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.question {
+  color: #000;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.answer {
+  color: #000;
+  display: none;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 5px;
+}
