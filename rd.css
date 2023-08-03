@@ -14,12 +14,10 @@ body {
   color: #ffffff;
 }
 
-
-
 /* Estilo para o contêiner */
 .container {
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1px;
 }
 
 /* Estilo para o quadro de vídeo */
@@ -29,12 +27,14 @@ body {
 
 /* Estilo para o contêiner de vídeo */
 .video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* Proporção de aspecto para vídeos 16:9 */
+  position: absolute;
+  left: 14%;
+  top: 4%;
+  width: 77%;
+  padding-bottom: 131.25%; /* Proporção de aspecto para vídeos 16:9 */
   overflow: hidden;
-  border: 4px solid #51A629; /* Cor da borda verde */
-  box-shadow: 0 0 10px #51A629; /* Sombra neon */
+  border: 4px solid #51a629; /* Cor da borda verde */
+  box-shadow: 0 0 10px #51a629; /* Sombra neon */
 }
 
 /* Estilo para o player de vídeo */
@@ -62,7 +62,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #59BF2A;
+  background-color: #59bf2a;
   transition: width 0.3s ease-in-out;
 }
 
