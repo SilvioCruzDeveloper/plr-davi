@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+/* Estilos da moldura retangular com efeito neon */
+.video-container {
+  position: relative;
+  width: 80%; /* Usando porcentagem para se adaptar ao contêiner pai */
+  padding-bottom: 49.25%; /* Proporção 16:9 para manter a proporção do vídeo */
+  margin: 0 auto;
+  border: 4px solid #51a629; /* Cor da borda verde */
+  box-shadow: 0 0 10px #51a629; /* Sombra neon */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.neon-text {
+  position: relative;
+  display: inline-block;
+}
+
+.neon-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  text-shadow: 0 0 10px #59bf2a;
+  animation: neon-glow 1s infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 10px #59bf2a;
+  }
+  100% {
+    text-shadow: 0 0 20px #59bf2a, 0 0 30px #59bf2a, 0 0 40px #59bf2a,
+      0 0 50px #59bf2a;
+  }
+}
+
+/* Estilos para o botão */
+.neon-button {
+  display: inline-block;
+  background-color: #51a629; /* Cor do botão */
+  color: #ffffff; /* Cor do texto */
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 10px #51a629; /* Sombra neon no hover */
+}
+a {
+  text-decoration: none;
+}
+/* Estilos globais */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right, #000000, #000000);
+  color: #ffffff;
+}
+
+main {
+  max-width: 600px; /* Definindo uma largura máxima */
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 10ex;
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: serif;
+  text-align: center;
+  color: #000000;
+  box-shadow: 1px 1px 5px #ffffff35;
+  background-color: #ffffff20;
+  border-radius: 16px;
+  padding: 3px;
+}
+
+h2 {
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 0px 1px 1px #50ff505a;
+  padding: 3px;
+ 
+  color: #ffffff;
+  
+}
+
+p {
+  text-align: justify;
+}
+.pr > p {
+  font-size: 1.2em;
+}
+.preco > p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.al > img {
+  max-width: 400px;
+  height: auto;
+  padding: 100hv;
+  display: block;
+  margin: auto;
+}
+/* Estilo para o contêiner das imagens */
+.van {
+  display: flex; /* Para que as imagens fiquem alinhadas horizontalmente */
+}
+
+/* Estilo para todas as imagens dentro do contêiner */
+
+li img {
+  decoration: none;
+  max-width: 400px;
+  height: auto;
+  padding: 100hv;
+  display: block;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  li img {
+    max-width: 50%; /* Reduz a largura da imagem para 50% em telas menores que 768 pixels */
+  }
+}
+.neon-button {
+  display: block; /* Mudando para display block para ocupar toda a largura do contêiner */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #59bf2a;
+  text-shadow: 0 0 10px #59bf2a;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #0000009e;
+  width: 100%; /* Usando 100% de largura do contêiner pai */
+  padding: 15px;
+  margin-top: 20px; /* Adicionando margem superior para separar do conteúdo acima */
+  border-radius: 20px;
+}
+
+.neon-button:hover {
+  animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 10px #59bf2a;
+  }
+  100% {
+    text-shadow: 0 0 20px #59bf2a, 0 0 30px #59bf2a, 0 0 40px #59bf2a,
+      0 0 50px #59bf2a;
+  }
+}
+
+h3 {
+  font-family: serif;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 3px;
+  box-shadow: 1px 1px 5px #00000019;
+  color: #ffffff;
+  text-shadow: 0 0 10px #000000;
+  font-size: 2em;
+}
+.hn {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+}
+
+.neon-border {
+  box-shadow: 0 0 5px #59bf2a, 0 0 10px #59bf2a, 0 0 20px #59bf2a,
+    0 0 30px #59bf2a, 0 0 40px #59bf2a, 0 0 70px #59bf2a, 0 0 80px #59bf2a,
+    0 0 100px #59bf2a, 0 0 150px #59bf2a;
+}
+
+.im:hover {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10%;
+}
+
+ul li {
+  padding: 10px;
+
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  color: #333333;
+}
+
+ul li:hover {
+  background-color: #cecece;
+}
+
+ul li a {
+  color: #333333;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  ul li {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos iOS */
+}
+
+.image-list {
+  display: flex;
+}
+
+.image-frame {
+  flex: 0 0 100%;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.image-frame img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-buttons {
+  display: none;
+}
+
+.carousel-buttons.show-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .carousel-container {
+    scroll-behavior: smooth;
+  }
+
+  .carousel-buttons {
+    display: flex;
+  }
+}
+/* Estilo para as barras de rolagem em navegadores Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Estilo para o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #000; /* Cor de fundo */
+}
+
+/* Estilo para a alça (polegar) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #59bf2a; /* Cor verde neon */
+}
+
+/* Estilo para a alça (polegar) da barra de rolagem quando estiver sendo arrastada */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #59bf2a; /* Cor verde neon com um tom mais escuro */
+}
+
+/* Estilo para a alça (polegar) da barra de rolagem quando estiver ativa (clicada) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #59bf2a; /* Cor verde neon com um tom mais escuro */
+}
+
+/* Estilo para as barras de rolagem em navegadores Firefox */
+/* Utilizei o mesmo estilo para o fundo e a alça, mas você pode ajustar conforme preferir */
+/* Infelizmente, os navegadores Firefox não possuem suporte a cores personalizadas */
+/* Este código só terá efeito no Chrome, Safari e navegadores baseados no WebKit */
+
+/* Estilo para as barras de rolagem em navegadores Microsoft Edge e Internet Explorer */
+/* Este código só terá efeito no Edge e IE versões 10 e 11 */
+
+/* Estilo para as barras de rolagem em navegadores Firefox */
+/* Este código só terá efeito no Firefox */

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="rd.css" />
+    <title>
+      Exemplo de Carregamento de Vídeo do YouTube com Reprodução Automática
+    </title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="video-frame">
+          <div class="video-container">
+            <div id="player"></div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+              <div class="progress-text">Clique aqui para redirecionar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://www.youtube.com/iframe_api"
+      frameborder="0"
+      allowfullscreen
+    ></script>
+    <script>
+      // Função chamada quando o vídeo termina
+      function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          // Redirecionar para outra página quando o vídeo terminar
+          window.location.href = "page.html";
+        }
+      }
+
+      // Atualizar a barra de progresso com base no tempo do vídeo
+      function updateProgressBar(event) {
+        const progress =
+          (event.target.getCurrentTime() / event.target.getDuration()) * 100;
+        document.querySelector(".progress").style.width = progress + "%";
+      }
+
+      // Carregar o vídeo do YouTube quando o API estiver pronto
+      function onYouTubeIframeAPIReady() {
+        new YT.Player("player", {
+          height: "100%",
+          width: "100%",
+          videoId: "TDHz7XVAwzM",
+          playerVars: {
+            autoplay: 1, // Reprodução automática
+            controls: 0, // Ocultar controles do player
+            disablekb: 1, // Desabilitar teclado
+            iv_load_policy: 3, // Desabilitar anotações
+            modestbranding: 1, // Ocultar logotipo do YouTube
+            playsinline: 1, // Reprodução em linha
+          },
+          events: {
+            onStateChange: onPlayerStateChange,
+            onPlaybackQualityChange: updateProgressBar,
+            onPlaybackRateChange: updateProgressBar,
+            onError: updateProgressBar,
+            onApiChange: updateProgressBar,
+            onReady: function (event) {
+              setInterval(function () {
+                updateProgressBar(event);
+              }, 100);
+            },
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
